@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecteur de code barre Paris Prix</title>
+    <!-- Ajout du favicon -->
+    <link rel="icon" type="image/png" href="code-barre.png">
+    <!-- Inclusion du fichier CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Ajout du style pour centrer les éléments -->
+    <style>
+        body {
+            text-align: center;
+        }
+        #logo {
+            margin: 20px auto;
+            display: block;
+        }
+        h1 {
+            margin-top: 20px;
+        }
+        /* Style pour l'iframe */
+        #iframeContainer {
+            width: 100%;
+            height: 400px; /* Ajustez la hauteur selon vos besoins */
+            margin-top: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none; /* Supprimer la bordure de l'iframe */
+        }
+    </style>
+</head>
+<body>
+    <!-- Ajout du logo -->
+    <img id="logo" src="logo.png" alt="Paris Prix Logo">
+    <!-- Titre modifié -->
+    <h1>Lecteur de code barre Paris Prix</h1>
+    <input type="text" id="eanInput" placeholder="Entrez le code EAN13">
+    <button id="searchButton">Rechercher</button>
+    <video id="video" class="video-container" width="300" height="200" autoplay></video>
+    <div class="button-container">
+        <button id="startButton">Démarrer la lecture</button>
+        <button id="stopButton">Arrêter la lecture</button>
+    </div>
+    <div id="result"></div>
+    <div id="rayon"></div>
+
+    <!-- Conteneur de l'iframe -->
+    <div id="iframeContainer">
+        <!-- Iframe pour charger produit.php -->
+        <iframe id="productIframe" src="" frameborder="0"></iframe>
+    </div>
+
+    <!-- Inclure la bibliothèque ZXing -->
+    <script src="https://unpkg.com/@zxing/library@latest"></script>
+    <!-- Inclure le fichier JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
